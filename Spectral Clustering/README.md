@@ -18,13 +18,20 @@
 
 
 # Spectral Clustering and Graph Theory
+
 Spectral clustering is based on graph theory where the data is viewed as a graph and the problem is solved with the help of the graph spectrum, the graph eigen values. 
-
-## Unweighted vs. Weighted Graphs
-**Unweighted graphs** are graphs that either have a single edge between vertices or no edges at all. **Weighted graphs**, on the other hand, are graphs are graphs that can have multiple edges between vertices, or a weighted edge. 
-
-## Adjacency Matrix (A)
+<br/><br/>
+## Prelimenaries
 ---
+Here are some preliminaries before introducing the spectral clustering.
+<br/><br/>
+### Unweighted vs. Weighted Graphs
+---
+**Unweighted graphs** are graphs that either have a single edge between vertices or no edges at all. **Weighted graphs**, on the other hand, are graphs are graphs that can have multiple edges between vertices, or a weighted edge. 
+<br /><br />
+
+### Adjacency Matrix (A)
+-----
 The adjacency matrix is a matrix of size $n \times n$ where n represents the number of graph vertices, whose `A[u][v]` entry is defined as follows:
 
 $$
@@ -45,12 +52,13 @@ $$
 
 <!---------------------------------------->
 
-### Example
+#### Example
+
 An unweighted graph that consists of 6 vertices and 8 edges is shown below along with its adjacency matrix (A).
 
 <div align="center" style="display: flex;">
     <div style="flex: 50%;">
-        <img src="../imgs/graph.png" width="120" title="graph">
+        <img src="../_resources/images/graph.png" width="120" title="graph">
     </div>
     <div style="flex: 50%;">
 
@@ -72,7 +80,7 @@ $$
 <p> </p> <p> </p>
 
 <!-------------------------------------------------------------------------------->
-## Degree Matrix (D)
+### Degree Matrix (D)
 ---
 The degree of a vertex, $d(v)$, is the number of edges connecting to it. It shows how strong a given vertex is connected to other vertices in the graph. A degree of zero means an isolated vertex. The **degree matrix** is a diagonal matrix where each diagonal entry represents the degree of that vertix:
 
@@ -83,11 +91,12 @@ D(u,v)=\begin{cases}
 \end{cases}
 $$ 
 
-### Example
+
+#### Example
 The picture below shows the degree of each vertex and the matrix on right is the degree matrix.
 <div align="center" style="display: flex;">
     <div style="flex: 50%;">
-        <img src="../imgs/degree.png" width="120" title="">
+        <img src="../_resources/images/degree.png" width="120" title="">
     </div>
     <div style="flex: 50%;">
 
@@ -110,7 +119,8 @@ $$
 
 
 <!-------------------------------------------------------------------------------->
-## Graph Laplacian (L)
+<br /><br />
+### Graph Laplacian (L)
 ---
 Graph lapacian is simply:
 
@@ -118,11 +128,11 @@ $$
 L= D - A
 $$ 
 
-### Example
+#### Example
 The same graph marked with the laplacian information and its laplacian matrix $L$.
 <div align="center" style="display: flex;">
     <div style="flex: 50%;">
-        <img src="../imgs/laplacian.png" width="120" title="">
+        <img src="../_resources/images/laplacian.png" width="120" title="">
     </div>
     <div style="flex: 50%;">
 
@@ -146,8 +156,10 @@ $$
 
 
 <!-------------------------------------------------------------------------------->
-## Normalized Graph Laplacian (N)
----
+
+<br /><br />
+### Normalized Graph Laplacian (N)
+
 The normalized graph laplacian shows the laplacian normalized to the degree of each vertex as given below
 
 $$
@@ -158,7 +170,7 @@ $$
 The same graph marked with the laplacian information and its laplacian matrix $L$.
 <div align="center" style="display: flex;">
     <div style="flex: 50%;">
-        <img src="../imgs/normalized.png" width="120" title="">
+        <img src="../_resources/images/normalized.png" width="120" title="">
     </div>
     <div style="flex: 50%;">
 
